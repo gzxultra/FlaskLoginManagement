@@ -1,5 +1,6 @@
 # all the import
 import sqlite3
+import re
 from flask import Flask, request, session, g, redirect, url_for, \
     abort, render_template, flash
 from contextlib import closing
@@ -8,8 +9,8 @@ from contextlib import closing
 DATABASE = '/tmp/flaskr.db'
 DEBUG = True
 SECRET_KEY = 'development key'
-USERNAME = 'admin'
-PASSWORD = 'default'
+# USERNAME = 'admin'
+# PASSWORD = 'default'
 
 # create our little application
 app = Flask(__name__)
@@ -77,7 +78,6 @@ def login():
             session['logged_in'] = True
             flash('You were logged in')
             return redirect(url_for('show_entries'))
-
     return render_template('login.html', error=error)
 
 
@@ -94,6 +94,12 @@ def signin():
     if request.method == 'POST':
         current_username = request.form['username']
         current_password = request.form['password']
+        if validate_email(current_username) == False:
+            error = 'Invalid username'
+            return render_template('signin.html', error=error)
+        if validate_password(current_password) == False:
+            error = 'Invalid password'
+            return render_template('signin.html', error=error)
         # print current_username
         cur = g.db.execute(
             "select count(id) from users where usrname = ? ", (current_username,))
@@ -117,6 +123,20 @@ def test_db():
     users = [dict(username=row[0], password=row[1]) for row in cur.fetchall()]
     print users
     return redirect(url_for('login'))
+
+
+def validate_email(email):
+    if re.match('^\w+[\w.]*@[\w.]+\.\w+$', email) is not None:
+        return True
+    else:
+        return False
+
+
+def validate_password(password):
+    if re.match('^[0-9_a-zA-Z]{6,20}$', password) is not None:
+        return True
+    else:
+        return False
 
 
 if __name__ == '__main__':
