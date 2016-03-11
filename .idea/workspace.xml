@@ -14,7 +14,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/flaskr$flaskr.coverage" NAME="flaskr Coverage Results" MODIFIED="1457661558054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flaskr$flaskr.coverage" NAME="flaskr Coverage Results" MODIFIED="1457673060027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,37 +31,57 @@
     <favorites_list name="flaskr" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="flaskr.py" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="flaskr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87931037">
-              <caret line="183" column="23" selection-start-line="182" selection-start-column="34" selection-end-line="183" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
                 <element signature="e#17#31#0" expanded="true" />
-                <marker date="1457661504000" expanded="true" signature="1117:1151" placeholder="select title... entries" />
-                <marker date="1457661504000" expanded="true" signature="1117:1165" placeholder="select title... entries" />
-                <marker date="1457661504000" expanded="true" signature="1384:1433" placeholder="select locat... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="1703:1742" placeholder="insert into entries... " />
-                <marker date="1457661504000" expanded="true" signature="1703:1750" placeholder="insert into entries... " />
-                <marker date="1457661504000" expanded="true" signature="2183:2236" placeholder="select passw... users" />
-                <marker date="1457661504000" expanded="true" signature="2183:2259" placeholder="select passw... users" />
-                <marker date="1457661504000" expanded="true" signature="2635:2662" placeholder="insert into onlineInfo... " />
-                <marker date="1457661504000" expanded="true" signature="2635:2690" placeholder="insert into onlineInfo... " />
-                <marker date="1457661504000" expanded="true" signature="3265:3283" placeholder="delete from " />
-                <marker date="1457661504000" expanded="true" signature="3265:3293" placeholder="delete from " />
-                <marker date="1457661504000" expanded="true" signature="3265:3307" placeholder="delete from " />
-                <marker date="1457661504000" expanded="true" signature="3265:3318" placeholder="delete from " />
-                <marker date="1457661504000" expanded="true" signature="3506:3538" placeholder="select count... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="3506:3567" placeholder="select count... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="4194:4239" placeholder="select count... users" />
-                <marker date="1457661504000" expanded="true" signature="4194:4262" placeholder="select usrna... users" />
-                <marker date="1457661504000" expanded="true" signature="4416:4465" placeholder="insert into users... " />
-                <marker date="1457661504000" expanded="true" signature="5094:5144" placeholder="select count... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="5181:5241" placeholder="select locat... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="5187:5241" placeholder="select id, u... onlineInfo" />
-                <marker date="1457661504000" expanded="true" signature="5579:5612" placeholder="select usrna... users" />
+                <marker date="1457666556000" expanded="true" signature="1182:1216" placeholder="select title... entries" />
+                <marker date="1457666556000" expanded="true" signature="1182:1230" placeholder="select title... entries" />
+                <marker date="1457666556000" expanded="true" signature="1449:1498" placeholder="select locat... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="1768:1807" placeholder="insert into entries... " />
+                <marker date="1457666556000" expanded="true" signature="1768:1815" placeholder="insert into entries... " />
+                <marker date="1457666556000" expanded="true" signature="2248:2301" placeholder="select passw... users" />
+                <marker date="1457666556000" expanded="true" signature="2248:2324" placeholder="select passw... users" />
+                <marker date="1457666556000" expanded="true" signature="2700:2727" placeholder="insert into onlineInfo... " />
+                <marker date="1457666556000" expanded="true" signature="2700:2755" placeholder="insert into onlineInfo... " />
+                <marker date="1457666556000" expanded="true" signature="3330:3348" placeholder="delete from " />
+                <marker date="1457666556000" expanded="true" signature="3330:3358" placeholder="delete from " />
+                <marker date="1457666556000" expanded="true" signature="3330:3372" placeholder="delete from " />
+                <marker date="1457666556000" expanded="true" signature="3330:3383" placeholder="delete from " />
+                <marker date="1457666556000" expanded="true" signature="3571:3603" placeholder="select count... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="3571:3632" placeholder="select count... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="4259:4304" placeholder="select count... users" />
+                <marker date="1457666556000" expanded="true" signature="4259:4327" placeholder="select usrna... users" />
+                <marker date="1457666556000" expanded="true" signature="4481:4530" placeholder="insert into users... " />
+                <marker date="1457666556000" expanded="true" signature="5159:5209" placeholder="select count... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="5246:5306" placeholder="select locat... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="5252:5306" placeholder="select id, u... onlineInfo" />
+                <marker date="1457666556000" expanded="true" signature="5644:5677" placeholder="select usrna... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,7 +89,7 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -79,7 +99,7 @@
       <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -89,28 +109,8 @@
       <file leaf-file-name="show_entries.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.15625">
-              <caret line="3" column="74" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/schema.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6666665">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signin.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/signin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.928571">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -119,38 +119,28 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.035714">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="10" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8125">
-              <caret line="3353" column="31" selection-start-line="3353" selection-start-column="31" selection-end-line="3353" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4642856">
-              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.56356734">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,11 +162,15 @@
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/signin.html" />
         <option value="$PROJECT_DIR$/static/style.css" />
-        <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/show_entries.html" />
         <option value="$PROJECT_DIR$/schema.sql" />
         <option value="$PROJECT_DIR$/templates/user.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/flaskr.py" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/requirement.txt" />
+        <option value="$PROJECT_DIR$/requirements/README.md" />
       </list>
     </option>
   </component>
@@ -216,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,26 +242,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flaskr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flaskr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="requirements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -350,6 +330,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -514,25 +499,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12840746" sideWeight="0.4955414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12984218" sideWeight="0.4955414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2522293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2522293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3388535" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12840746" sideWeight="0.5044586" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3388535" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12840746" sideWeight="0.5044586" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -554,66 +539,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.214286">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#17#31#0" expanded="true" />
+            <marker date="1457666556000" expanded="true" signature="1182:1216" placeholder="select title... entries" />
+            <marker date="1457666556000" expanded="true" signature="1182:1230" placeholder="select title... entries" />
+            <marker date="1457666556000" expanded="true" signature="1449:1498" placeholder="select locat... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="1768:1807" placeholder="insert into entries... " />
+            <marker date="1457666556000" expanded="true" signature="1768:1815" placeholder="insert into entries... " />
+            <marker date="1457666556000" expanded="true" signature="2248:2301" placeholder="select passw... users" />
+            <marker date="1457666556000" expanded="true" signature="2248:2324" placeholder="select passw... users" />
+            <marker date="1457666556000" expanded="true" signature="2700:2727" placeholder="insert into onlineInfo... " />
+            <marker date="1457666556000" expanded="true" signature="2700:2755" placeholder="insert into onlineInfo... " />
+            <marker date="1457666556000" expanded="true" signature="3330:3348" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3358" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3372" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3383" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3571:3603" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="3571:3632" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="4259:4304" placeholder="select count... users" />
+            <marker date="1457666556000" expanded="true" signature="4259:4327" placeholder="select usrna... users" />
+            <marker date="1457666556000" expanded="true" signature="4481:4530" placeholder="insert into users... " />
+            <marker date="1457666556000" expanded="true" signature="5159:5209" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5246:5306" placeholder="select locat... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5252:5306" placeholder="select id, u... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5644:5677" placeholder="select usrna... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8125">
-          <caret line="3353" column="31" selection-start-line="3353" selection-start-column="31" selection-end-line="3353" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.035714">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6666665">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4642856">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/signin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.928571">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.15625">
-          <caret line="3" column="74" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -628,41 +597,187 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1875">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.214286">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6666665">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87931037">
-          <caret line="183" column="23" selection-start-line="182" selection-start-column="34" selection-end-line="183" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
             <element signature="e#17#31#0" expanded="true" />
-            <marker date="1457661504000" expanded="true" signature="1117:1151" placeholder="select title... entries" />
-            <marker date="1457661504000" expanded="true" signature="1117:1165" placeholder="select title... entries" />
-            <marker date="1457661504000" expanded="true" signature="1384:1433" placeholder="select locat... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="1703:1742" placeholder="insert into entries... " />
-            <marker date="1457661504000" expanded="true" signature="1703:1750" placeholder="insert into entries... " />
-            <marker date="1457661504000" expanded="true" signature="2183:2236" placeholder="select passw... users" />
-            <marker date="1457661504000" expanded="true" signature="2183:2259" placeholder="select passw... users" />
-            <marker date="1457661504000" expanded="true" signature="2635:2662" placeholder="insert into onlineInfo... " />
-            <marker date="1457661504000" expanded="true" signature="2635:2690" placeholder="insert into onlineInfo... " />
-            <marker date="1457661504000" expanded="true" signature="3265:3283" placeholder="delete from " />
-            <marker date="1457661504000" expanded="true" signature="3265:3293" placeholder="delete from " />
-            <marker date="1457661504000" expanded="true" signature="3265:3307" placeholder="delete from " />
-            <marker date="1457661504000" expanded="true" signature="3265:3318" placeholder="delete from " />
-            <marker date="1457661504000" expanded="true" signature="3506:3538" placeholder="select count... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="3506:3567" placeholder="select count... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="4194:4239" placeholder="select count... users" />
-            <marker date="1457661504000" expanded="true" signature="4194:4262" placeholder="select usrna... users" />
-            <marker date="1457661504000" expanded="true" signature="4416:4465" placeholder="insert into users... " />
-            <marker date="1457661504000" expanded="true" signature="5094:5144" placeholder="select count... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="5181:5241" placeholder="select locat... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="5187:5241" placeholder="select id, u... onlineInfo" />
-            <marker date="1457661504000" expanded="true" signature="5579:5612" placeholder="select usrna... users" />
+            <marker date="1457666556000" expanded="true" signature="1182:1216" placeholder="select title... entries" />
+            <marker date="1457666556000" expanded="true" signature="1182:1230" placeholder="select title... entries" />
+            <marker date="1457666556000" expanded="true" signature="1449:1498" placeholder="select locat... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="1768:1807" placeholder="insert into entries... " />
+            <marker date="1457666556000" expanded="true" signature="1768:1815" placeholder="insert into entries... " />
+            <marker date="1457666556000" expanded="true" signature="2248:2301" placeholder="select passw... users" />
+            <marker date="1457666556000" expanded="true" signature="2248:2324" placeholder="select passw... users" />
+            <marker date="1457666556000" expanded="true" signature="2700:2727" placeholder="insert into onlineInfo... " />
+            <marker date="1457666556000" expanded="true" signature="2700:2755" placeholder="insert into onlineInfo... " />
+            <marker date="1457666556000" expanded="true" signature="3330:3348" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3358" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3372" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3330:3383" placeholder="delete from " />
+            <marker date="1457666556000" expanded="true" signature="3571:3603" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="3571:3632" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="4259:4304" placeholder="select count... users" />
+            <marker date="1457666556000" expanded="true" signature="4259:4327" placeholder="select usrna... users" />
+            <marker date="1457666556000" expanded="true" signature="4481:4530" placeholder="insert into users... " />
+            <marker date="1457666556000" expanded="true" signature="5159:5209" placeholder="select count... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5246:5306" placeholder="select locat... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5252:5306" placeholder="select id, u... onlineInfo" />
+            <marker date="1457666556000" expanded="true" signature="5644:5677" placeholder="select usrna... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/show_entries.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56356734">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

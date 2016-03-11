@@ -4,6 +4,7 @@ import re
 from flask import Flask, request, session, g, redirect, url_for, \
     abort, render_template, flash
 from contextlib import closing
+from flask_bootstrap import Bootstrap
 
 # configuration
 DATABASE = '/tmp/flaskr.db'
@@ -15,6 +16,7 @@ SECRET_KEY = '\xb1\xdd\x9b\xbbG\x90\xa5\xfb\x11\x8ai\xca\xd6\xf3!3DO\xbcG@\xf2\x
 # create our little application
 app = Flask(__name__)
 app.config.from_object(__name__)
+bootstrap = Bootstrap(app)
 
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 # silent param tells our app not to report error if SETTINGS file not exists
@@ -186,6 +188,10 @@ def test_list():
     offline('b@b.com', '1')
     return render_template('test.html')
 
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
