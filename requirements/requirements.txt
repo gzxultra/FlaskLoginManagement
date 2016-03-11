@@ -3,3 +3,6 @@ Flask-Bootstrap==3.3.5.7
 Flask-Script==2.0.5
 Jinja2==2.8
 itsdangerous==0.24
+Flask-SQLAlchemy==2.1
+Flask-Migrate==1.8.0
+Flask-WTF==0.12

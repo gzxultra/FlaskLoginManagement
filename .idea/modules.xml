@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flaskr.iml" filepath="$PROJECT_DIR$/.idea/flaskr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FlaskLoginManagement.iml" filepath="$PROJECT_DIR$/.idea/FlaskLoginManagement.iml" />
     </modules>
   </component>
 </project>
