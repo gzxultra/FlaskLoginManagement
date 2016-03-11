@@ -8,7 +8,7 @@ from contextlib import closing
 # configuration
 DATABASE = '/tmp/flaskr.db'
 DEBUG = True
-SECRET_KEY = 'development key'
+SECRET_KEY = '\xb1\xdd\x9b\xbbG\x90\xa5\xfb\x11\x8ai\xca\xd6\xf3!3DO\xbcG@\xf2\x8e\x84'
 # USERNAME = 'admin'
 # PASSWORD = 'default'
 
@@ -49,6 +49,14 @@ def show_entries():
     entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     return render_template('show_entries.html', entries=entries)
 
+@app.route('/user/<name>')
+def user(name):
+    cur = g.db.execute(
+        'select location from onlineInfo where usrname = ?', (name,))
+    user = [dict(location=row[0]) for row in cur.fetchall()]
+    print user
+    return render_template('user.html', users=user)
+
 
 @app.route('/add', methods=['POST'])
 def add_entry():
@@ -70,22 +78,42 @@ def login():
         cur = g.db.execute(
             'select count(id), passwd from users where usrname = ?', (current_username,))
         data_dic = cur.fetchall()
-        if 0 == int(data_dic[0][0]):
+        users_already_logged_in = int(data_dic[0][0])
+        if 0 == users_already_logged_in:
             error = 'Invalid username'
         elif current_password != data_dic[0][1]:
             error = 'Invalid password'
         else:
+            client_already_logged_in = list_logged_in_client(current_username)
+            g.db.execute('insert into onlineInfo (usrname, location) values(?, ?)',
+                               [current_username, str(int(client_already_logged_in)+1)])
+            g.db.commit()
             session['logged_in'] = True
+            session['info'] = (current_username, int(client_already_logged_in)+1)
             flash('You were logged in')
-            return redirect(url_for('show_entries'))
+
+            return redirect(url_for('user', name=current_username))
     return render_template('login.html', error=error)
 
 
 @app.route('/logout')
 def logout():
-    session.pop('logged_in')
+    print session
+    information = session.get('info')
+    print information
+    session.clear()
+    print session
+    g.db.execute('delete from onlineInfo where usrname=? and location=?', (information[0], information[1]))
+    g.db.commit()
     flash('You were logged out')
     return redirect(url_for('show_entries'))
+
+
+def offline(name, id):
+    cur = g.db.execute('delete from onlineInfo where usrname=? and location=?', (name, id))
+    g.db.commit()
+
+
 
 
 @app.route('/signin', methods=['GET', 'POST'])
@@ -94,10 +122,10 @@ def signin():
     if request.method == 'POST':
         current_username = request.form['username']
         current_password = request.form['password']
-        if validate_email(current_username) == False:
+        if validate_email(current_username) is False:
             error = 'Invalid username'
             return render_template('signin.html', error=error)
-        if validate_password(current_password) == False:
+        if validate_password(current_password) is False:
             error = 'Invalid password'
             return render_template('signin.html', error=error)
         # print current_username
@@ -115,16 +143,6 @@ def signin():
     return render_template('signin.html', error=error)
 
 
-# danerous! shall be removed after finished!
-@app.route('/testdb')
-def test_db():
-    cur = g.db.execute(
-            'select usrname, passwd from users')
-    users = [dict(username=row[0], password=row[1]) for row in cur.fetchall()]
-    print users
-    return redirect(url_for('login'))
-
-
 def validate_email(email):
     if re.match('^\w+[\w.]*@[\w.]+\.\w+$', email) is not None:
         return True
@@ -139,5 +157,35 @@ def validate_password(password):
         return False
 
 
+def list_logged_in_client(current_username):
+    print current_username
+    cur = g.db.execute(
+            # 'select count(id) from onlineInfo where usrname = ?', (current_username,))
+            'select location, count(id) from onlineInfo where usrname = ?', (current_username,))
+    online = cur.fetchall()
+    print online
+    client_already_logged_in = online[0][1]
+    print client_already_logged_in
+    return client_already_logged_in
+    # print cur.fetchall()[0][0]
+
+
+# danerous! shall be removed after finished!
+@app.route('/testdb')
+def test_db():
+    cur = g.db.execute(
+            'select usrname, passwd from users')
+    users = [dict(username=row[0], password=row[1]) for row in cur.fetchall()]
+    print users
+    return redirect(url_for('login'))
+
+
+# danerous! shall be removed after finished!
+@app.route('/testlist')
+def test_list():
+    offline('b@b.com', '1')
+    return render_template('test.html')
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

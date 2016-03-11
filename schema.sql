@@ -11,3 +11,10 @@ create table users (
   usrname char(10) not null,
   passwd char(10) not null
 );
+
+drop table if exists onlineInfo;
+create table onlineInfo (
+  id integer primary key autoincrement,
+  usrname char(10) not null,
+  location char(10) not null
+);
