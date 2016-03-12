@@ -8,4 +8,3 @@ Flask-Migrate==1.8.0
 Flask-WTF==0.12
 Flask-Moment==0.5.1
 Flask-Mail==0.9.1
-Flask-Login==0.3.2
