@@ -1,6 +1,6 @@
 from flask import render_template, session, redirect, url_for, current_app
 from .. import db
-from ..models import User
+from ..models import User, OnlineInfo
 from ..email import send_email
 from . import main
 from .forms import NameForm
@@ -33,3 +33,16 @@ def index():
 def secret():
     return 'Only authenticated users are allowed!'
 
+
+@main.route('/user/<username>')
+@login_required
+def user(username):
+    users = OnlineInfo.query.filter_by(username=username).all()
+    users = [x.device for x in users ]
+    print users
+    return render_template('user.html', users=users)
+
+
+@main.route('/tmp')
+def tmp():
+    return render_template('tmp.html')

@@ -6,6 +6,7 @@ from .forms import LoginForm, RegistrationForm
 from .. import db
 from ..email import send_email
 from flask import session, request
+from flask_user import user_logged_out
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -20,7 +21,8 @@ def login():
                                  device=(request.remote_addr + request.user_agent.__str__()))
             db.session.add(loginfo)
             db.session.commit()
-            return redirect(request.args.get('next') or url_for('main.index'))
+
+            return redirect(url_for('main.index'))
         flash('Invalid username or password.')
     return render_template('auth/login.html', form=form)
 
@@ -88,7 +90,6 @@ def resend_confirmation():
     token = current_user.generate_confirmation_token()
     send_email(current_user.email, 'Confirm Your Account',
                'auth/email/confirm', user=current_user, token=token)
-    flash('A new confirmation email has been sent to you by email.')
+    flash('A new confirmation email has been sent to your address.')
     return redirect(url_for('main.index'))
-
 

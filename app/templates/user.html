@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+<h2>Clients you have logged in:</h2>
+    <ul>
+        {% for user in users %}
+            <li><a href="{{ ' ' }}">{{ user }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

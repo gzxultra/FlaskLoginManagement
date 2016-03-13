@@ -45,6 +45,9 @@ class OnlineInfo(db.Model):
     username = db.Column(db.String(64), index=True)
     device = db.Column(db.String(128), unique=False, index=True)
 
+    def __repr__(self):
+        return '<OnlineInfo %r>' % self.username
+
 
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
@@ -115,7 +118,7 @@ class Permission:
 
 
 class AnonymousUser(AnonymousUserMixin):
-    def can(selfself, permissions):
+    def can(self, permissions):
         return False
 
     def is_administrator(self):
