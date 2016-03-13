@@ -1,0 +1,13 @@
+Dear {{ user.username }},
+
+Welcome to FalskLoginMangement!
+
+To confirm your account please click on the following link:
+
+{{ url_for('auth.confirm', token=token, _external=True) }}
+
+Sincerely,
+
+The FlaskLoginManagement Support Team
+
+If you did not sign up or request for email confirmation, please ignore this email.

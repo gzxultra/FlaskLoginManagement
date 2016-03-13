@@ -7,7 +7,75 @@
 <div class="page-header">
     <h1>Register</h1>
 </div>
-<div class="col-md-4">
+
+<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> Email   </option>
+    <option value="1"> Weibo            </option>
+    <option value="1"> Qzone            </option>
+</select>
+<br />         <br />
+
+<div class="Email">
     {{ wtf.quick_form(form) }}
 </div>
+
+<div class="Weibo">
+    Weibo
+</div>
+
+<div class="Qzone">
+    Qzone
+</div>
+
+<script type="text/javascript">
+    // get nodes
+    var $Email = document.querySelector(".Email");
+    var $Weibo = document.querySelector(".Weibo");
+    var $QZone = document.querySelector(".Qzone");
+    var $select = document.querySelector("select");
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // Weibo
+        if(_hash == "#Weibo"){
+            $select.selectedIndex = 1;
+            $Weibo.style.display = "block";
+            $Email.style.display = "none";
+            $Qzone.style.display = "none";
+            // zh by default
+        }
+        if(_hash == "#Email"){
+            $select.selectedIndex = 0;
+            $Email.style.display = "none";
+            $Weibo.style.display = "block";
+            $Qzone.style.display = "block";
+        }
+        if(_hash == "#Qzone"){
+            $select.selectedIndex = 2;
+            $Email.style.display = "block";
+            $Weibo.style.display = "block";
+            $Qzone.style.display = "none";
+        }
+    }
+    // handle select change
+    function onLanChange(index){
+        if(index == 0) {
+            window.location.hash = "#Qzone"
+        }
+        if(index == 1){
+            window.location.hash = "#Weibo"
+        }
+        if(index == 2)
+        {
+            window.location.hash = "#Qzone"
+        }
+    }
+    // init
+    _render();
+</script>
+
 {% endblock %}
+
+
