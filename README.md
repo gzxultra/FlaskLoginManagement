@@ -17,15 +17,20 @@ learning flask
 
 目前已经完成的部分
 
-首页：
+### 首页：
 ![首页](http://ww3.sinaimg.cn/large/bfe31badjw1f1wdau27g3j20hs0vkt9q.jpg)
-注册页面：
+
+### 注册页面：
 ![注册](http://ww1.sinaimg.cn/large/bfe31badjw1f1wdbao1jyj20hs0vkaba.jpg)
-发送验证邮件：
+
+### 发送验证邮件：
 ![发送验证邮件](http://ww4.sinaimg.cn/large/bfe31badjw1f1wdbw6nuzj20hs0vk75g.jpg)
-tokenzied的验证邮件：
+
+### tokenzied的验证邮件：
 ![tokenzied的验证邮件](http://ww3.sinaimg.cn/large/bfe31badjw1f1wdcg5fcaj20hs0vkdht.jpg)
-登录界面：
+
+### 登录界面：
 ![登录](http://ww4.sinaimg.cn/large/bfe31badjw1f1wd8753pej20hs0vkgmr.jpg)
-已登录客户端:
+
+### 已登录客户端:
 ![已登录客户端](http://ww3.sinaimg.cn/large/bfe31badjw1f1wd9pk8cwj20hs0vkac9.jpg)
