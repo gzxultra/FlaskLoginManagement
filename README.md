@@ -1,6 +1,7 @@
 # FlaskLoginManagement
 learning flask
 
+## 需求
 实现一个账号系统，需要实现多种登录方式的绑定与解绑，以及多点登录的管理。具体需求如下：
 
 - 用户可以通过邮箱、微博和 QQ 空间三种方式登录；
@@ -11,3 +12,20 @@ learning flask
 
 需求 5 举例，用户在 Chrome 和 Firefox 分别登录，标记为登录 1 和登录 2，用户可以看到当前有 2 个在线登录。用户注销登录 2 后，Firefox 需要重新登录，但 Chrome 不受影响。
 
+
+## 效果
+
+目前已经完成的部分
+
+首页：
+![首页](http://ww3.sinaimg.cn/large/bfe31badjw1f1wdau27g3j20hs0vkt9q.jpg)
+注册页面：
+![注册](http://ww1.sinaimg.cn/large/bfe31badjw1f1wdbao1jyj20hs0vkaba.jpg)
+发送验证邮件：
+![发送验证邮件](http://ww4.sinaimg.cn/large/bfe31badjw1f1wdbw6nuzj20hs0vk75g.jpg)
+tokenzied的验证邮件：
+![tokenzied的验证邮件](http://ww3.sinaimg.cn/large/bfe31badjw1f1wdcg5fcaj20hs0vkdht.jpg)
+登录界面：
+![登录](http://ww4.sinaimg.cn/large/bfe31badjw1f1wd8753pej20hs0vkgmr.jpg)
+已登录客户端:
+![已登录客户端](http://ww3.sinaimg.cn/large/bfe31badjw1f1wd9pk8cwj20hs0vkac9.jpg)
