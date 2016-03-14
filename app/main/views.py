@@ -1,4 +1,4 @@
-from flask import render_template, session, redirect, url_for, current_app
+from flask import render_template, session, redirect, url_for, current_app, request
 from .. import db
 from ..models import User, OnlineInfo
 from ..email import send_email
@@ -39,8 +39,9 @@ def secret():
 def user(username):
     users = OnlineInfo.query.filter_by(username=username).all()
     users = [x.device for x in users ]
-    print users
-    return render_template('user.html', users=users)
+    self_info = request.remote_addr + str(request.user_agent)
+    print self_info
+    return render_template('user.html', self_info=self_info, users=users)
 
 
 @main.route('/tmp')

@@ -22,7 +22,7 @@ def login():
             db.session.add(loginfo)
             db.session.commit()
 
-            return redirect(url_for('main.index'))
+            return redirect(url_for('main.user', username=user.username))
         flash('Invalid username or password.')
     return render_template('auth/login.html', form=form)
 
