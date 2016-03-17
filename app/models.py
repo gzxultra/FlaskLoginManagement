@@ -43,7 +43,8 @@ class OnlineInfo(db.Model):
     __tablename__ = 'onlineinfo'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True)
-    device = db.Column(db.String(128), unique=False, index=True)
+    method = db.Column(db.Enum('Email', 'Weibo', 'Qzone'), index=True)
+    device = db.Column(db.String(128), unique=False)
 
     def __repr__(self):
         return '<OnlineInfo %r>' % self.username

@@ -2,7 +2,13 @@ from flask_wtf import Form
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, Length, Email, Regexp, EqualTo
 from wtforms import ValidationError
+from wtforms.fields import RadioField, SelectField
 from ..models import User
+
+
+class LoginMethodForm(Form):
+    method = RadioField(u'Login Method',
+                        choices=[('email', 'Email'), ('weibo', 'Weibo'), ('qzone', ' Qzone')])
 
 
 class LoginForm(Form):
@@ -28,6 +34,7 @@ class RegistrationForm(Form):
             raise ValidationError('Email already registered.')
 
     def validate_username(self, field):
-        if User.query.filter_by(username=field.data).first():
+        user = User.query.filter_by(username=field.data).first()
+        if user is not None and user.weibo_id is None:
             raise ValidationError('Username already in use.')
 

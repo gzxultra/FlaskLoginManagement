@@ -5,7 +5,7 @@ learning flask
 实现一个账号系统，需要实现多种登录方式的绑定与解绑，以及多点登录的管理。具体需求如下：
 
 - [x] 用户可以通过邮箱、微博和 QQ 空间三种方式登录；
-- [ ] 通过其中一种方式登录后，可以设置其他登录方式；
+- [x] 通过其中一种方式登录后，可以设置其他登录方式；
 - [ ] 拥有两种以上登录方式时，可以解绑其中任意一种，但最后一种登录方式不能解绑；
 - [ ] 一个解绑后的登录方式可以用于登录新的账号；
 - [x] 用户可从多处登录，在一处登录后可查看该用户当前所有在线登录，并可注销其中任意一个。被注销的登录需要重新登录，未被注销的登录不受影响。
@@ -29,8 +29,14 @@ learning flask
 ### tokenzied的验证邮件：
 ![tokenzied的验证邮件](http://ww3.sinaimg.cn/large/bfe31badjw1f1wdcg5fcaj20hs0vkdht.jpg)
 
+### 微博登录：
+![微博登录](http://ww2.sinaimg.cn/large/bfe31badgw1f208e8jzuej20l80clwfx.jpg)
+
 ### 登录界面：
 ![登录](http://ww4.sinaimg.cn/large/bfe31badjw1f1wd8753pej20hs0vkgmr.jpg)
 
 ### 已登录客户端:
 ![已登录客户端](http://ww3.sinaimg.cn/large/bfe31badjw1f1wd9pk8cwj20hs0vkac9.jpg)
+
+### 登录后绑定新的登录方式：
+![登录后绑定新的登录方式](http://ww3.sinaimg.cn/large/bfe31badgw1f208emsf3vj20ul0ao0uf.jpg)

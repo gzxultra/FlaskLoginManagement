@@ -2,34 +2,38 @@ from flask import render_template, redirect, request, url_for, flash, make_respo
 from . import auth
 from flask_login import login_user, logout_user, login_required, current_user
 from ..models import User, OnlineInfo
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm, RegistrationForm, LoginMethodForm
 from .. import db
 from ..email import send_email
 from flask import session, request
 from weibo import APIClient
 from wtforms import BooleanField
+from urllib import quote, unquote
 
 APP_KEY = '3778597079'  # app key
 APP_SECRET = '8ad4515ccaa3899eec266ada034d11ea'  # app secret
-CALLBACK_URL = 'http://127.0.0.1:5000/auth/callback'  # callback url
+AUTHORIZE_CALLBACK = 'http://127.0.0.1:5000/auth/callback/authorize'
+CANCEL_AUTHORIZATION_CALLBACK = 'http://127.0.0.1:5000/auth/callback/cancel'
 
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
-        if user is not None and user.verify_password(form.password.data):
-            login_user(user, form.remember_me.data)
+    login_info_form = LoginForm()
+    login_method_form = LoginMethodForm()
+    print login_method_form.method
+    if login_info_form.validate_on_submit():
+        user = User.query.filter_by(email=login_info_form.email.data).first()
+        if user is not None and user.verify_password(login_info_form.password.data):
+            login_user(user, login_info_form.remember_me.data)
 
-            loginfo = OnlineInfo(username=user.username,
+            loginfo = OnlineInfo(username=user.username, method='Email',
                                  device=(request.remote_addr + request.user_agent.__str__()))
             db.session.add(loginfo)
             db.session.commit()
             print session
             return redirect(url_for('main.user', username=user.username))
         flash('Invalid username or password.')
-    return render_template('auth/login.html', form=form)
+    return render_template('auth/login.html', login_info_form=login_info_form, login_method_form=login_method_form)
 
 
 @auth.route('/logout')
@@ -48,11 +52,19 @@ def logout():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(email=form.email.data,
-                    username=form.username.data,
-                    password=form.password.data)
-        db.session.add(user)
-        db.session.commit()
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None:
+            user = User(email=form.email.data,
+                        username=form.username.data,
+                        password=form.password.data)
+            db.session.add(user)
+            db.session.commit()
+        else:
+            user.email = form.email.data
+            user.password=form.password.data
+            db.session.add(user)
+            db.session.commit()
+
         token = user.generate_confirmation_token()
         send_email(user.email, 'Confirm Your Account',
                    'auth/email/confirm', user=user, token=token)
@@ -76,7 +88,8 @@ def confirm(token):
 @auth.before_app_request
 def before_request():
     logged_in_or_not = is_logged_in(request.remote_addr + request.user_agent.__str__())
-    print logged_in_or_not
+    if not logged_in_or_not:
+        logout_user()
     if current_user.is_authenticated \
             and not current_user.confirmed \
             and request.endpoint[:5] != 'auth.' \
@@ -103,7 +116,7 @@ def resend_confirmation():
 
 
 def get_api_client():
-    return APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)
+    return APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=AUTHORIZE_CALLBACK)
 
 
 @auth.route("/login/weibo")
@@ -132,7 +145,7 @@ def weibo_login():
         return html
 
 
-@auth.route("/callback")
+@auth.route("/callback/authorize")
 def callback():
     try:
         code = request.args.get("code")
@@ -143,19 +156,24 @@ def callback():
         client.set_access_token(r.access_token, r.expires_in)
         weibo_id = client.get.account__get_uid()
         weibo_account = dict(client.get.users__show(uid=weibo_id.uid))
-        print weibo_account.get('domain')
+
+        # find out whether there's weibo_logged_in user
         user = User.query.filter_by(weibo_id=weibo_id.uid).first()
+        weibo_name = weibo_account.get('domain')
         if user is None:
-            print 'None'
-            user = User(username=weibo_account.get('domain'), weibo_id=weibo_id.uid)
-        elif user.username is None:
-            print 'None2'
-            user.username = weibo_account.get('domain')
-        db.session.add(user)
-        db.session.commit()
+            account_name_exisits = User.query.filter_by(username=weibo_name).first()
+            if account_name_exisits is None:
+                user = User(username=weibo_name, weibo_id=weibo_id.uid, confirmed=1)
+                db.session.add(user)
+                db.session.commit()
+            else:
+                account_name_exisits.weibo_id = weibo_id.uid
+                db.session.add(account_name_exisits)
+                db.session.commit()
+
         login_user(user, BooleanField('Keep me logged in'))
-        loginfo = OnlineInfo(username=user.username,
-                                 device=(request.remote_addr + request.user_agent.__str__()))
+        loginfo = OnlineInfo(username=user.username, method='Weibo',
+                             device=(request.remote_addr + request.user_agent.__str__()))
         db.session.add(loginfo)
         db.session.commit()
         print session
@@ -170,5 +188,24 @@ def is_logged_in(loginfo):
         return False
     else:
         return True
+
+
+@auth.route('/logout/<id>')
+@login_required
+def logout_sepcific_user(id):
+    user = OnlineInfo.query.filter_by(id=id).first()
+    username = current_user.username
+
+    self_info = request.remote_addr + str(request.user_agent)
+    try:
+        db.session.delete(user)
+        db.session.commit()
+    except Exception as e:
+        return "DB operation error: %s" % str(e)
+    users = OnlineInfo.query.filter_by(username=username).all()
+    user_id = [x.id for x in users]
+    user_device = [x.device for x in users ]
+    users = dict(zip(user_id, user_device))
+    return render_template('user.html', self_info=self_info, users=users)
 
 

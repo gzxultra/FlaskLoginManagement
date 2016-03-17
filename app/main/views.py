@@ -38,10 +38,20 @@ def secret():
 @login_required
 def user(username):
     users = OnlineInfo.query.filter_by(username=username).all()
-    users = [x.device for x in users ]
+    user_id = [x.id for x in users]
+    user_device = [x.device for x in users]
+    users = dict(zip(user_id, user_device))
     self_info = request.remote_addr + str(request.user_agent)
-    print self_info
-    return render_template('user.html', self_info=self_info, users=users)
+
+    account = User.query.filter_by(username=username).first()
+    email_bool, weibo_bool = False, False
+    if account.email is not None and account.email != '':
+        email_bool = True
+    if account.weibo_id is not None and account.weibo_id !='':
+        weibo_bool = True
+    register_status = dict(zip(['Email', 'Weibo'], [email_bool, weibo_bool]))
+    print register_status
+    return render_template('user.html', self_info=self_info, users=users, register_status=register_status)
 
 
 @main.route('/tmp')
