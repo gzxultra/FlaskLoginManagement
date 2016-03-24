@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, url_for, flash, make_response
+from flask import render_template, redirect, request, url_for, flash, make_response, current_app
 from . import auth
 from flask_login import login_user, logout_user, login_required, current_user
 from ..models import User, OnlineInfo
@@ -8,12 +8,6 @@ from ..email import send_email
 from flask import session, request
 from weibo import APIClient
 from wtforms import BooleanField
-from urllib import quote, unquote
-
-APP_KEY = '3778597079'  # app key
-APP_SECRET = '8ad4515ccaa3899eec266ada034d11ea'  # app secret
-AUTHORIZE_CALLBACK = 'http://127.0.0.1:5000/auth/callback/authorize'
-CANCEL_AUTHORIZATION_CALLBACK = 'http://127.0.0.1:5000/auth/callback/cancel'
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -90,6 +84,7 @@ def before_request():
     logged_in_or_not = is_logged_in(request.remote_addr + request.user_agent.__str__())
     if not logged_in_or_not:
         logout_user()
+        print 'logout!!!'
     if current_user.is_authenticated \
             and not current_user.confirmed \
             and request.endpoint[:5] != 'auth.' \
@@ -116,7 +111,8 @@ def resend_confirmation():
 
 
 def get_api_client():
-    return APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=AUTHORIZE_CALLBACK)
+    app = current_app._get_current_object()
+    return APIClient(app_key=app.config['APP_KEY'], app_secret=app.config['APP_SECRET'], redirect_uri=app.config['AUTHORIZE_CALLBACK'])
 
 
 @auth.route("/login/weibo")
@@ -171,7 +167,8 @@ def callback():
                 db.session.add(account_name_exisits)
                 db.session.commit()
 
-        login_user(user, BooleanField('Keep me logged in'))
+        login_user(user, False)
+        print 'user: ', user
         loginfo = OnlineInfo(username=user.username, method='Weibo',
                              device=(request.remote_addr + request.user_agent.__str__()))
         db.session.add(loginfo)
@@ -194,18 +191,11 @@ def is_logged_in(loginfo):
 @login_required
 def logout_sepcific_user(id):
     user = OnlineInfo.query.filter_by(id=id).first()
-    username = current_user.username
-
-    self_info = request.remote_addr + str(request.user_agent)
     try:
         db.session.delete(user)
         db.session.commit()
     except Exception as e:
         return "DB operation error: %s" % str(e)
-    users = OnlineInfo.query.filter_by(username=username).all()
-    user_id = [x.id for x in users]
-    user_device = [x.device for x in users ]
-    users = dict(zip(user_id, user_device))
-    return render_template('user.html', self_info=self_info, users=users)
+    return redirect(url_for('main.user', username=user.username))
 
 

@@ -120,6 +120,8 @@ class Permission:
 
 
 class AnonymousUser(AnonymousUserMixin):
+    username = 'Stranger'
+
     def can(self, permissions):
         return False
 

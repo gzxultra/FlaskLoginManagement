@@ -15,6 +15,10 @@ class Config:
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = '顾志翔 <mygladfinger@gmail.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN') or 'gzxultra'
+    APP_KEY = '3778597079'  # app key
+    APP_SECRET = '8ad4515ccaa3899eec266ada034d11ea'  # app secret
+    AUTHORIZE_CALLBACK = 'http://127.0.0.1:5000/auth/callback/authorize'
+    CANCEL_AUTHORIZATION_CALLBACK = 'http://127.0.0.1:5000/auth/callback/cancel'
 
     @staticmethod
     def init_app(app):
