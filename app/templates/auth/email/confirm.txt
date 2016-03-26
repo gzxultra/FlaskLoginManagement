@@ -11,3 +11,5 @@ Sincerely,
 The FlaskLoginManagement Support Team
 
 If you did not sign up or request for email confirmation, please ignore this email.
+
+PLEASE check your junk/spam folder before contacting us, as it is very common to have email delivery problems because of automated filters.

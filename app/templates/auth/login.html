@@ -15,5 +15,7 @@
     <br>
     <p>New user? <a href="{{ url_for('auth.register') }}">Click here to register</a>.</p>
 </div>
-    <a href="{{ url_for('auth.weibo_login')}}">Weibo Login</a>
+    <a class="btn btn-danger"
+       href="{{ url_for('auth.weibo_login') }}">Weibo Login
+    </a>
 {% endblock %}

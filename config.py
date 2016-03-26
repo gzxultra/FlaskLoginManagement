@@ -19,6 +19,7 @@ class Config:
     APP_SECRET = '8ad4515ccaa3899eec266ada034d11ea'  # app secret
     AUTHORIZE_CALLBACK = 'http://127.0.0.1:5000/auth/callback/authorize'
     CANCEL_AUTHORIZATION_CALLBACK = 'http://127.0.0.1:5000/auth/callback/cancel'
+    FLASK_POSTS_PER_PAGE=20
 
     @staticmethod
     def init_app(app):
